@@ -5,6 +5,11 @@
 
 	homeCtrl.$inject = ['$scope', 'loc8rData', 'geolocation'];
 	function homeCtrl($scope, loc8rData, geolocation) {
+		//check copy-pasted URL's and append # in URL for IE 8 and 9
+		if(window.location.pathname !== '/') {
+			window.location.href = '/#' + window.location.pathname;
+		}
+
 		var vm = this;
 		vm.pageHeader = {
 			title: 'Loc8r',
