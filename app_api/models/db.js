@@ -57,4 +57,6 @@ if (process.platform === "win32") {
 	});
 }
 
+// Bring in schemas and models
 require('./locations');
+require('./users');
